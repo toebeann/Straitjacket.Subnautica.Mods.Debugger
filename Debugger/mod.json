@@ -1,0 +1,10 @@
+﻿{
+    "Id": "Straitjacket.Subnautica.Mods.Debugger",
+    "DisplayName": "Debugger",
+    "Author": "Tobey Blaber",
+    "Version": "1.0.0",
+    "AssemblyName": "Straitjacket.Subnautica.Mods.Debugger.dll",
+    "EntryMethod": "Straitjacket.Subnautica.Mods.Debugger.HarmonyPatcher.ApplyPatches",
+    "Enable": true,
+    "Game": "Subnautica"
+}
