@@ -40,7 +40,13 @@ namespace Straitjacket.Subnautica.Mods.Debugger
 
         private void Options_KeybindChanged(object sender, KeybindChangedEventArgs e)
         {
-            throw new System.NotImplementedException();
+            switch (e.Id)
+            {
+                case "debuggerKey":
+                    ToggleDebuggerVisibilityKey = e.Key;
+                    break;
+            }
+            UpdateJSON();
         }
 
         private void UpdateJSON()
