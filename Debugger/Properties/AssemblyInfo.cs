@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDescription("Debug Utility for Subnautica Modders")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Straitjacket Software")]
-[assembly: AssemblyProduct("Debugger")]
+[assembly: AssemblyProduct("Straitjacket Subnautica Debugger")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
