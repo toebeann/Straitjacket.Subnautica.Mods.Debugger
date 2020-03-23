@@ -18,6 +18,11 @@ namespace Straitjacket.Subnautica.Mods.Debugger.Patch
             {
                 Debugger.TogglePause();
             }
+
+            if (Debugger.Paused)
+            {
+                UWE.Utils.lockCursor = false;
+            }
         }
     }
 }

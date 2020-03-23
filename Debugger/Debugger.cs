@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using SMLHelper.V2.Handlers;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -18,6 +17,7 @@ namespace Straitjacket.Subnautica.Mods.Debugger
         {
             OptionsPanelHandler.RegisterModOptions(Options);
             SceneManager.sceneLoaded += SceneManager_sceneLoaded;
+            Harmony.Debugger.BreakpointEvent.AddListener(Harmony_Debugger_BreakpointEvent);
         }
 
         private static bool enabled = false;
@@ -38,25 +38,32 @@ namespace Straitjacket.Subnautica.Mods.Debugger
                 }
             }
         }
-
-        private static bool paused = false;
+        public static bool Paused { get; private set; } = false;
         private static bool lockCursor = false;
         public static void TogglePause()
         {
-            paused = !paused;
+            Paused = !Paused;
 
-            if (paused)
+            if (Paused)
             {
                 UWE.FreezeTime.Begin("debugPause");
                 lockCursor = UWE.Utils.lockCursor;
                 UWE.Utils.lockCursor = false;
                 SetGrayscaleValue(1f);
+                Enabled = true;
             }
             else
             {
                 SetGrayscaleValue(0f);
                 UWE.Utils.lockCursor = lockCursor;
                 UWE.FreezeTime.End("debugPause");
+            }
+        }
+        private static void Harmony_Debugger_BreakpointEvent(object sender, Harmony.BreakpointEventArgs e)
+        {
+            if (!Paused)
+            {
+                TogglePause();
             }
         }
 
