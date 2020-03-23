@@ -1,6 +1,8 @@
 # Straitjacket Subnautica Debugger
 Straitjacket Subnautica Debugger (SSD) is a runtime debug utility for Subnautica modders built on top of Harmony, the QMods framework, and Straitjacket's own Harmony utilities library<sup>[[1]](#Notes)</sup>.
 
+![Straitjacket Subnautica Debugger](https://staticdelivery.nexusmods.com/mods/1155/images/440/440-1584998694-327530811.png "Straitjacket Subnautica Debugger")
+
 ## Features
 - Live, filterable debug logs with file paths and line numbers<sup>[[2]](#Notes)</sup>.
 - Live tabbed watch variables, object instances, properties, fields etc., regardless of whether they are private, public, internal etc.
