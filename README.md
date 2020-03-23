@@ -14,7 +14,7 @@ Straitjacket Subnautica Debugger (SSD) is a runtime debug utility for Subnautica
 ## Installation
 1. Install [QModManager](https://www.nexusmods.com/subnautica/mods/201 "QModManager")
 1. Install [SMLHelper (ModdingHelper)](https://www.nexusmods.com/subnautica/mods/113 "SMLHelper (ModdingHelper)")
-1. Download and extract the [latest Debugger release](https://github.com/tobeyStraitjacket/Straitjacket.Subnautica.Mods.Debugger/releases/latest/download/Debugger.zip "latest Debugger release"), placing the Debugger folder in your Subnautica\QMods directory
+1. Download and extract the [latest Debugger release](https://github.com/tobeyStraitjacket/Straitjacket.Subnautica.Mods.Debugger/releases/latest/download/Debugger.zip "latest Debugger release"), placing the `Straitjacket Subnautica Debugger` folder in your `Subnautica\QMods` directory
 
 ## Usage
 See the [wiki](https://github.com/tobeyStraitjacket/Straitjacket.Subnautica.Mods.Debugger/wiki "Straitjacket Subnautica Debugger wiki") for usage details.
