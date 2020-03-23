@@ -6,5 +6,8 @@
     "AssemblyName": "Straitjacket.Subnautica.Mods.Debugger.dll",
     "EntryMethod": "Straitjacket.Subnautica.Mods.Debugger.HarmonyPatcher.ApplyPatches",
     "Enable": true,
-    "Game": "Subnautica"
+    "Game": "Subnautica",
+    "VersionDependencies": {
+        "SMLHelper": "2.4.0"
+    }
 }
