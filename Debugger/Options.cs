@@ -10,11 +10,13 @@ namespace Straitjacket.Subnautica.Mods.Debugger
     internal struct OptionsObject
     {
         public KeyCode ToggleDebuggerVisibilityKey { get; set; }
+        public KeyCode TogglePauseKey { get; set; }
     }
 
     internal class Options : ModOptions
     {
         public KeyCode ToggleDebuggerVisibilityKey = KeyCode.F2;
+        public KeyCode TogglePauseKey = KeyCode.Pause;
         private string ConfigPath
             => Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "config.json");
 
@@ -36,6 +38,8 @@ namespace Straitjacket.Subnautica.Mods.Debugger
         {
             AddKeybindOption("debuggerKey", "Show/hide Debugger",
                 GameInput.GetPrimaryDevice(), ToggleDebuggerVisibilityKey);
+            AddKeybindOption("pauseKey", "Toggle pause",
+                GameInput.GetPrimaryDevice(), TogglePauseKey);
         }
 
         private void Options_KeybindChanged(object sender, KeybindChangedEventArgs e)
@@ -45,6 +49,9 @@ namespace Straitjacket.Subnautica.Mods.Debugger
                 case "debuggerKey":
                     ToggleDebuggerVisibilityKey = e.Key;
                     break;
+                case "pauseKey":
+                    TogglePauseKey = e.Key;
+                    break;
             }
             UpdateJSON();
         }
@@ -53,7 +60,8 @@ namespace Straitjacket.Subnautica.Mods.Debugger
         {
             var options = new OptionsObject
             {
-                ToggleDebuggerVisibilityKey = ToggleDebuggerVisibilityKey
+                ToggleDebuggerVisibilityKey = ToggleDebuggerVisibilityKey,
+                TogglePauseKey = TogglePauseKey
             };
 
             var stringBuilder = new StringBuilder();
@@ -74,7 +82,10 @@ namespace Straitjacket.Subnautica.Mods.Debugger
                 var data = JsonMapper.ToObject(optionsJSON);
                 ToggleDebuggerVisibilityKey = data.ContainsKey("ToggleDebuggerVisibilityKey")
                     ? options.ToggleDebuggerVisibilityKey : ToggleDebuggerVisibilityKey;
-                if (!data.ContainsKey("ToggleDebuggerVisibilityKey"))
+                TogglePauseKey = data.ContainsKey("TogglePauseKey")
+                    ? options.TogglePauseKey : TogglePauseKey;
+                if (!data.ContainsKey("ToggleDebuggerVisibilityKey") ||
+                    !data.ContainsKey("TogglePauseKey"))
                 {
                     UpdateJSON();
                 }

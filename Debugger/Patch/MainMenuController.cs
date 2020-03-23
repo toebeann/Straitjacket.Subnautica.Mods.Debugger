@@ -13,6 +13,11 @@ namespace Straitjacket.Subnautica.Mods.Debugger.Patch
             {
                 Debugger.Enabled = !Debugger.Enabled;
             }
+
+            if (Input.GetKeyUp(Debugger.Options.TogglePauseKey))
+            {
+                Debugger.TogglePause();
+            }
         }
     }
 }
