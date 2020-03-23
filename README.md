@@ -3,7 +3,7 @@ Straitjacket Subnautica Debugger (SSD) is a runtime debug utility for Subnautica
 
 ## Features
 - Live, filterable debug logs with file paths and line numbers<sup>[[2]](#Notes)</sup>.
-- Live tabbed watch variables, object instances, properties, fields etc.
+- Live tabbed watch variables, object instances, properties, fields etc., regardless of whether they are private, public, internal etc.
 - Pause the game at any point to inspect your watched properties and logs.
 - Automatically pause and inspect watched properties when a breakpoint is hit in code.
 
