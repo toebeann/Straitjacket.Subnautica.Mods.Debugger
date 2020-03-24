@@ -9,13 +9,13 @@ namespace Straitjacket.Subnautica.Mods.Debugger.Patch
     {
         static void Postfix(MainGameController __instance)
         {
-            if (Input.GetKeyUp(Debugger.Options.ToggleDebuggerVisibilityKey))
+            if (Input.GetKeyDown(Debugger.Options.ToggleDebuggerVisibilityKey))
             {
                 Debugger.Enabled = !Debugger.Enabled;
             }
 
             if (!WaitScreen.main.isShown
-                && Input.GetKeyUp(Debugger.Options.TogglePauseKey))
+                && Input.GetKeyDown(Debugger.Options.TogglePauseKey))
             {
                 Debugger.TogglePause();
             }
