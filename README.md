@@ -1,4 +1,11 @@
 # Straitjacket Subnautica Debugger
+
+**THIS REPOSITORY IS ARCHIVED AND WILL NO LONGER BE UPDATED**
+
+Since Subnautica Modding has migrated to BepInEx, it is now advised to use BepInEx's own live console along with the [Runtime Unity Editor](https://github.com/ManlyMarco/RuntimeUnityEditor) and [BepInEx's debugging tools](https://github.com/BepInEx/BepInEx.Debug) for all of your debugging needs.
+
+---
+
 Straitjacket Subnautica Debugger (SSD) is a runtime debug utility for Subnautica modders built on top of Harmony, the QMods framework, and Straitjacket's own Harmony utilities library<sup>[[1]](#Notes)</sup>.
 
 ![Straitjacket Subnautica Debugger](https://staticdelivery.nexusmods.com/mods/1155/images/440/440-1584998694-327530811.png "Straitjacket Subnautica Debugger")
